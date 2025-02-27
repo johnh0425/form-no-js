@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+:root {
+    --font-primary: 'Montserrat', sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background: linear-gradient(135deg, #f5f7fa, #c3cfe2);
+    font-family: var(--font-primary), Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 40px;
+}
+form {
+    display: grid;
+    gap: 1rem;
+    width: 100%;
+    max-width: 600px;
+    border: 2px solid black;
+    border-style: dotted;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+label[for]:has(+ input[required])::after {
+    content: " *";
+    color: red;
+    font-weight: bold;
+}
+
+form:hover {
+    transform: translateY(-5px);
+}
+label {
+    font-weight: bold;
+    font-size: 0.75rem;
+    display: block;
+}
+input, select, textarea {
+    width: 100%;
+    max-width: 550px;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+input, select, textarea {
+    transition: all 0.3s ease-in-out;
+}
+input:focus, select:focus, textarea:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 8px rgba(0, 123, 255, 0.5);
+}
+fieldset {
+    border: none;
+    padding: 0;
+}
+legend {
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+output {
+    display: block;
+    font-size: 0.9rem;
+    color: #d9534f; /* Red for errors */
+}
+.info {
+    color: #5bc0de; /* Blue for info messages */
+}
+button {
+    background-color: #007bff;
+    transition: all 0.3s ease-in-out;
+    color: white;
+    font-weight: bold;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    letter-spacing: 1px;
+    box-shadow: 0 3px 10px rgba(0, 123, 255, 0.3);
+}
+#backBtn {
+    margin: 10px;
+}
+button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 5px 15px rgba(0, 86, 179, 0.5);
+}
